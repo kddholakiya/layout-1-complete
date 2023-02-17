@@ -29,7 +29,7 @@ header.stickyHeader {
     z-index: 500;
 }
 
-nav {
+.nav {
     padding: 20px 0;
     color: white;
     display: flex;
@@ -37,7 +37,7 @@ nav {
     align-items: center;
 }
 
-.logo h1 {
+.logo h2 {
     font-size: 25px;
 }
 
@@ -133,7 +133,7 @@ nav {
     padding: 50px 0 100px;
 }
 
-.f_text h1 {
+.f_text h2 {
     font-size: 70px;
     font-weight: bolder;
     text-align: center;
@@ -199,6 +199,7 @@ nav {
     width: 22%;
     margin-right: 30px;
 }
+
 .f_content .design {
     background-color: #FFCC00;
     width: 22%;
@@ -236,7 +237,7 @@ nav {
     width: auto;
 }
 
-.explore h1 {
+.explore h2 {
     color: white;
     font-size: 50px;
 }
@@ -288,7 +289,7 @@ nav {
     margin: 30px 0px 0px;
 }
 
-.brand_ing .text h1 {
+.brand_ing .text h2 {
     font-size: 40px;
     line-height: 100px !important;
 }
@@ -338,7 +339,7 @@ nav {
     width: 50%;
 }
 
-.banner2 .text h1 {
+.banner2 .text h2 {
     font-size: 70px;
     margin-bottom: 50px
 }
@@ -420,6 +421,7 @@ nav {
 .table tr td a i {
     height: 20px;
     width: 20px;
+    vertical-align: middle;
     text-align: center;
 }
 
@@ -445,7 +447,7 @@ table tr td:first-child {
     width: 50%;
 }
 
-.banner3 .text h1 {
+.banner3 .text h2 {
     font-size: 50px;
     font-weight: lighter;
     margin: 0 0 32px;
@@ -652,16 +654,18 @@ table tr td:first-child {
     right: -50%;
     font-size: 100px;
     transition: 1s ease-in-out all;
-    transform: translate(50%,-50%);
+    transform: translate(50%, -50%);
     top: 50%;
     opacity: 0;
     /* visibility: hidden; */
 }
+
 .c-and-s .contact:hover::after {
     z-index: 60;
-    opacity: 1;   
+    opacity: 1;
     /* visibility: visible; */
 }
+
 .contact strong {
     color: #22A5E5;
     font-size: 40px;
@@ -684,6 +688,7 @@ table tr td:first-child {
     position: relative;
     overflow: visible;
 }
+
 .c-and-s .support::before {
     content: '';
     position: absolute;
@@ -695,9 +700,11 @@ table tr td:first-child {
     transition: 0.5s ease-in-out all;
     z-index: 60;
 }
+
 .c-and-s .support:hover::before {
     width: 100%;
 }
+
 .c-and-s .support::after {
     content: "\f0f3";
     font-family: "Font Awesome 6 Free";
@@ -707,16 +714,18 @@ table tr td:first-child {
     font-size: 100px;
     /* visibility: hidden; */
     opacity: 0;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition-delay: 5s;
     transition: 0.7s ease-in-out all;
     z-index: -111;
 }
+
 .c-and-s .support:hover::after {
     opacity: 1;
     z-index: 390;
     /* visibility: visible; */
 }
+
 .support strong {
     font-size: 40px;
     color: #FFCC00;
@@ -794,7 +803,7 @@ footer {
 }
 
 .footer_content .paragraph {
-    max-width: 50%;
+    width: 50%;
     font-size: 18px;
     color: white;
     line-height: 30px;
@@ -803,7 +812,7 @@ footer {
 
 .footer_content .list1 {
     color: white;
-    max-width: 16.667%;
+    width: 16.667%;
     font-size: 18px;
     padding: 0 16px;
 }
@@ -819,12 +828,12 @@ footer {
 
 .footer_content .list2 {
     color: white;
-    max-width: 16.666%;
+    width: 16.666%;
     font-size: 18px;
 }
 
 .footer_content .icon {
-    max-width: 16.666%;
+    width: 16.666%;
 
 }
 
@@ -876,28 +885,304 @@ footer {
     margin: 0 -25px;
     font-size: 25px;
 }
+
 @media (max-width:768px) {
-    .wrapper{
+    *{
+        overflow-x: hidden;
+    }
+    .wrapper {
         max-width: 500px;
     }
-    .banner{
+
+    .banner {
         display: block;
         width: 100%;
     }
-    .banner .text{
+
+    .banner .text {
         width: 100%;
         text-align: center;
     }
-    .banner .img{
+
+    .banner .img {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-    .features{
+    .f_content{
+        justify-content: space-between;
+    }
+    .f_content .marketing {
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .f_content .design {
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .f_content .research {
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .f_content .branding {
+        width: 50%;
+        margin: 0  auto;
+    }
+
+    .f_content .marke_ting {
+        width: 50%;
+        margin: 0  auto;
+    }
+    .explore{
+        text-align: center;
+    }
+    .banner2{
+        flex-wrap: wrap;
+    }
+    .banner2 .text{
+        width: 100%;
+    }
+    .banner2 .img{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    tr{
+        flex-wrap: wrap;
+    }
+    .banner3{
+        flex-wrap: wrap;
+    }
+    .banner3 .text{
+        width: 100%;
+    }
+    .banner3 .content{
+        width: 100%;
         display: block;
     }
-    .features .marketing{
+    .banner3 .content .box{
+        width: 100%;
+    }
+    .img-content{
+        flex-wrap: wrap;
+    }
+    .team_img{
+        width: 50%;
+    }
+    .img_box{
+        display: flex;
+        justify-content: center;
+    }
+    .c-and-s{
+        display: block;
+    }
+    .c-and-s .contact{
+        width: 100%;
+    }
+    .c-and-s .support{
+        width: 100%;
+    }
+    .location{
+        display: block;
+    }
+    .footer .footer_content{
+        flex-wrap: wrap;
+    }
+    .footer_content .paragraph{
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .footer_content .list1{
         width: 50%;
         text-align: center;
+    }
+    .footer_content .list2{
+        width: 50%;
+        text-align: center;
+    }
+    .footer_content .icon{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .copyright{
+        display: block;
+    }
+    .copyright p{
+        width: 100%;
+        padding: 0;
+    }
+    .copyright .form{
+        width: 100%;
+        padding: 0;
+    }
+    .brand_ing{
+        flex-wrap: wrap;
+    }
+    .brand_ing .icon{
+        margin: 0 auto;
+    }
+    .brand_ing .text h2{
+        font-size: 25px;
+    }
+    .brand_ing .text{
+        margin: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 430px) {
+    .nav{
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+    .nav h2{
+        font-size: 13px;
+    }
+    .menu{
+        padding: 0;
+    }
+    .menu ul li a{
+        font-size: 12px;
+    }
+    .banner{
+        padding: 0px 0 20px;
+    }
+    .banner .text h1{
+        font-size: 18px;
+    }
+    .banner .text p{
+        font-size: 10px;
+    }
+    .banner .text a{
+        font-size: 9px;
+        padding: 6px 10px;
+        line-height: 50px;
+    }
+    .features{
+     padding: 30px 0;
+    }
+    .features .f_content{
+        padding-left: 0;
+    }
+    .f_text h2{
+        font-size: 25px;
+    }
+    .f_content .marketing {
+        width: 100%;
+    }
+
+    .f_content .design {
+        width: 100%;
+    }
+
+    .f_content .research {
+        width: 100%;
+    }
+
+    .f_content .branding {
+        width: 100%;
+    }
+
+    .f_content .marke_ting {
+        width: 100%;
+    }
+    .explore{
+        padding: 20px 0;
+    }
+    .explore h2{
+        font-size: 20px;
+    }
+    .explore a{
+        font-size: 14px;
+    }
+    .banner2 .text h2{
+        font-size: 35px;
+        text-align: center;
+    }
+    .banner2 .text p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .banner2 .icon strong{
+        font-size: 15px;
+    }
+    .banner3 .text h2{
+        font-size: 35px;
+        text-align: center;
+    }
+    .banner3 .text p{
+        text-align: center;
+        font-size: 15px;
+    }
+    .banner3 .box{
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .banner3 .box h3{
+        text-align: center;
+    }
+    .info h4{
+        font-size: 30px;
+        text-align: center;
+    }
+    .info p{
+        text-align: center;
+        font-size: 18px;
+    }
+    .details_sec .details{
+        font-size: 15px;
+    }
+    .details_sec .details:after{
+        top: 0;
+    }
+    .d_img .text{
+        font-size: 18px;
+    }
+    .our_team .team_details h3{
+        font-size: 27px;
+    }
+    .team_img{
+        width: 100%;
+    }
+    .connect_sec{
+        padding: 0;
+    }
+    .c-and-s .contact{
+        padding: 50px 20px;
+        text-align: center;
+    }
+    .c-and-s .support{
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .location{
+        text-align: center;
+    }
+    .location .icon{
+        width: 100%;
+    }
+    .location i{
+        font-size: 70px;
+    }
+    .location .content{
+        width: 100%;
+    }
+    .footer{
+        padding: 50px 0;
+    }
+    .footer_content .paragraph{
+        text-align: center;
+        padding: 0 25px;
+    }
+    .footer_content .list1{
+        width: 100%;
+    }
+    .footer_content .list2{
+        width: 100%;
     }
 }
